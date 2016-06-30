@@ -6,6 +6,8 @@ Requires an internet connection.
 To install, do:
 
 ```bash
+git clone https://github.com/aneeshdurg/pokedex
+cd pokedex
 chmod +x install.sh
 ./install.sh
 ```
