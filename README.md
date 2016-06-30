@@ -1,2 +1,17 @@
 # pokedex
-A command line pokedex that displays a picture and shows a pokedex entry about the pokemon
+A command line pokedex that displays a picture and shows a pokedex entry about the pokemon.i
+
+Requires an internet connection.
+
+To install, do:
+
+```bash
+chmod +x install.sh
+./install.sh
+```
+
+Shows a random pokemon by default. Only works for the first 150 pokemon.
+
+Usage: ./pokedex [pokemon name]
+
+![Sample](sample.png)
