@@ -15,3 +15,5 @@ Shows a random pokemon by default. Only displays images for the first 150 pokemo
 Usage: `pokedex [pokemon name]`
 
 ![Sample](sample.png)
+
+![Sample1](sample1.png)
