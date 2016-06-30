@@ -25,8 +25,8 @@ then
   cat pkmn-temp.txt
   rm pkmn-temp.txt
 fi
-echo Pokedex: $source
-echo -n   $pkdex
+echo Pokédex: $source
+echo -n "    $pkdex"
 if [ $img -eq 0 ]
 then 
   read n
