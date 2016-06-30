@@ -1,22 +1,33 @@
 cp ~/.pkmn/listPkmn-original.html listPkmn.html
 python ~/.pkmn/processPkmn.py $1
-url=$(cat imgUrl.txt)
-rm imgUrl.txt	
-rm listPkmn.html
-wget -q $url -O temp.jpg 
-img2txt -g 0.5 -d none temp.jpg > pkmn-temp.txt
-pkmnname=$(cat pkmnName.txt)
-rm pkmnName.txt
-rm temp.jpg
+img=$?
+pkmnname=$1
+if [ $img -eq 0 ]
+then
+  url=$(cat imgUrl.txt)
+  rm imgUrl.txt	
+  rm listPkmn.html
+  wget -q $url -O temp.jpg 
+  img2txt -g 0.5 -d none temp.jpg > pkmn-temp.txt
+  pkmnname=$(cat pkmnName.txt)
+  rm pkmnName.txt
+  rm temp.jpg
+fi
 python ~/.pkmn/getPokedex2.py "$pkmnname"
 pkdex=$(cat pkdex.txt)
 source=$(cat pkdesource.txt)
 rm pkdex.txt
 rm pkdesource.txt
 #echo $pkmnname
-sed -i "1 s/$/$pkmnname/" pkmn-temp.txt
-cat pkmn-temp.txt
-echo $source
+if [ $img -eq 0 ]
+then
+  sed -i "1 s/$/$pkmnname/" pkmn-temp.txt
+  cat pkmn-temp.txt
+  rm pkmn-temp.txt
+fi
+echo Pokedex: $source
 echo -n   $pkdex
-rm pkmn-temp.txt
-read n
+if [ $img -eq 0 ]
+then 
+  read n
+fi

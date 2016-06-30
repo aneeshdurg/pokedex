@@ -10,8 +10,8 @@ chmod +x install.sh
 ./install.sh
 ```
 
-Shows a random pokemon by default. Only works for the first 150 pokemon.
+Shows a random pokemon by default. Only displays images for the first 150 pokemon.
 
-Usage: pokedex [pokemon name]
+Usage: `pokedex [pokemon name]`
 
 ![Sample](sample.png)
