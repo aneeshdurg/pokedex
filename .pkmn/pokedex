@@ -12,22 +12,22 @@ then
   pkmnname=$(cat pkmnName.txt)
   rm pkmnName.txt
   rm temp.jpg
-fi
-python ~/.pkmn/getPokedex2.py "$pkmnname"
-pkdex=$(cat pkdex.txt)
-source=$(cat pkdesource.txt)
-rm pkdex.txt
-rm pkdesource.txt
-#echo $pkmnname
-if [ $img -eq 0 ]
-then
-  sed -i "1 s/$/$pkmnname/" pkmn-temp.txt
-  cat pkmn-temp.txt
-  rm pkmn-temp.txt
-fi
-echo Pokédex: $source
-echo -n "    $pkdex"
-if [ $img -eq 0 ]
-then 
-  read n
+  python ~/.pkmn/getPokedex2.py "$pkmnname"
+  pkdex=$(cat pkdex.txt)
+  source=$(cat pkdesource.txt)
+  rm pkdex.txt
+  rm pkdesource.txt
+  #echo $pkmnname
+  if [ $img -eq 0 ]
+  then
+    sed -i "1 s/$/$pkmnname/" pkmn-temp.txt
+    cat pkmn-temp.txt
+    rm pkmn-temp.txt
+  fi
+  echo Pokédex: $source
+  echo -n "    $pkdex"
+  if [ $img -eq 0 ]
+  then 
+    read n
+  fi
 fi
