@@ -17,4 +17,3 @@ Usage: `pokedex [pokemon name]`
 
 ![Sample](sample.png)
 
-![Sample1](sample1.png)
