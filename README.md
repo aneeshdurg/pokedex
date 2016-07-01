@@ -3,7 +3,9 @@ A command line pokedex that displays a picture and shows a pokedex entry about t
 
 Requires an internet connection.
 
-To install, do:
+To install, first install caca-utils. On ubuntu, this can be done via `sudo apt-get install caca-utils`.
+
+then do:
 
 ```bash
 git clone https://github.com/aneeshdurg/pokedex
