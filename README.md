@@ -19,3 +19,4 @@ Usage: `pokedex [pokemon name]`
 
 ![Sample](sample.png)
 
+All images and pokedex entries are obtained from bulbpedia. 
