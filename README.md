@@ -11,8 +11,7 @@ cd pokedex
 chmod +x install.sh
 ./install.sh
 ```
-
-Shows a random pokemon by default. Only displays images for the first 150 pokemon.
+Shows a random pokemon by default. 
 
 Usage: `pokedex [pokemon name]`
 
