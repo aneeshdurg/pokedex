@@ -1,18 +1,15 @@
-cp ~/.pkmn/listPkmn-original.html listPkmn.html
-python ~/.pkmn/processPkmn.py $1
+python ~/.pkmn/getPokedex3.py $1
 img=$?
 pkmnname=$1
 if [ $img -eq 0 ]
 then
   url=$(cat imgUrl.txt)
   rm imgUrl.txt	
-  rm listPkmn.html
   wget -q $url -O temp.jpg 
   img2txt -g 0.5 -d none temp.jpg > pkmn-temp.txt
   pkmnname=$(cat pkmnName.txt)
   rm pkmnName.txt
   rm temp.jpg
-  python ~/.pkmn/getPokedex2.py "$pkmnname"
   pkdex=$(cat pkdex.txt)
   source=$(cat pkdesource.txt)
   rm pkdex.txt
@@ -33,4 +30,3 @@ then
 else
   exit 1
 fi
-
